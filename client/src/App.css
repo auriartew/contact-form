@@ -1,0 +1,206 @@
+.App {
+  text-align: center;
+  box-sizing: border-box;
+  width: 99vw;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav h1 {
+  position: relative;
+  left: 1rem;
+}
+
+ul.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+}
+
+nav ul li {
+  list-style: none;
+  font-weight: 600;
+  transition: color 0.5s ease;
+}
+
+nav ul li:hover {
+  color:brown;
+}
+
+nav ul li .link-shape {
+  width: 0%;
+  height: 10%;
+  transform: rotate(-3deg);
+  animation: underline 1s ease-in;
+  background-color: chartreuse;
+}
+
+@keyframes underline {
+  from {width: 0%;}
+  to {width: 100%}
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.form-box {
+  box-shadow: rgba(0, 103, 237, 0.12) 0px 0px 10px 5px;
+  width: 40rem;
+  
+  color: #1d2143;
+}
+
+h1 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  
+}
+form {
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+div.input-container {
+  width: 70%;
+}
+
+form div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+label {
+  font-weight: 600;
+}
+input {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  width: 17rem;
+  line-height: 16px;
+  height: 1.2rem;
+  border: 1.2px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  transition: box-shadow 1s ease, border 1s ease;
+}
+
+input:focus, input:hover {
+  outline: none;
+  box-shadow: 0px 0px 3px 2px #0067ed98;
+}
+
+button {
+  z-index: 14;
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+  width: auto;
+  text-decoration: none;
+  white-space: nowrap;
+  min-height: 0px;
+  min-width: 0px;
+  max-height: none;
+  max-width: none;
+  text-align: left;
+  line-height: 17px;
+  letter-spacing: 0px;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  transform-origin: 50% 50%;
+  opacity: 1;
+  transform: translate(0px, 0px);
+  visibility: visible;
+  border-width: 0px;
+  transition: background-color 1s ease, color 1s ease;
+}
+
+button.next {
+  background-color: rgb(0, 103, 237);
+  color: rgb(255, 255, 255);
+}
+
+button.next:hover {
+ background-color: transparent; 
+ color: rgb(78, 78, 80)
+}
+
+button.back {
+
+  background-color: rgba(0, 103, 237, 0);
+  color: rgb(31, 36, 55);
+  border-color: rgb(31, 36, 55);
+  border-style: solid;
+  border-width: 1px;
+}
+
+button.back:hover {
+  background-color: rgb(31, 36, 55);
+  color: #fff;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .form-container {
+    width: 99vw;
+  }
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99vw;
+  }
+  form {
+    max-width: 90%;
+  }
+  form div.row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .form-container {
+    width: 99vw;
+  }
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99vw;
+  }
+  form {
+    max-width: 90%;
+  }
+  form div.row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
